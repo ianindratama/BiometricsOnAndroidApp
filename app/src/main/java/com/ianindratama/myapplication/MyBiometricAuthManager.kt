@@ -1,16 +1,16 @@
 package com.ianindratama.myapplication
 
 import android.os.Build
+import androidx.appcompat.app.AppCompatActivity
 import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_STRONG
 import androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL
 import androidx.biometric.BiometricPrompt
-import androidx.fragment.app.FragmentActivity
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 
 class MyBiometricAuthManager(
-    private val activity: FragmentActivity
+    private val activity: AppCompatActivity
 ) {
 
     private val resultChannel = Channel<BiometricResult>()
